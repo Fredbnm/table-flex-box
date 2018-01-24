@@ -1,2 +1,6 @@
-# table-flex-box
-Template of a table in flexbox
+# table flex box
+A flexbox and responsive table
+>
++Less
+>
++flexbox

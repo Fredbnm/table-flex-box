@@ -1,0 +1,79 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  box-model: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0;
+  margin: 0px auto;
+  justify-content: center;
+  align-items: center;
+}
+.content h1 {
+  font-size: 3.5em;
+  margin: 15px 0;
+  align-self: baseline;
+  font-weight: 400;
+  color: #bbb8b8;
+}
+/* Table*/
+table.table {
+  width: 100%;
+}
+table.table th,
+table.table td {
+  text-align: left;
+  padding: 0.25em;
+}
+table.table tr {
+  border-bottom: 1px solid #DDD;
+}
+table.table td.edit-buttons {
+  text-align: right;
+}
+table.table button {
+  border-radius: 3px;
+  border: none;
+  margin: 0 0.25em;
+  transition: all 0.3s;
+}
+table.table button:hover {
+  box-shadow: 0 0 4px rgba(3, 3, 3, 0.8);
+  opacity: 0.9;
+}
+table.table button.edit {
+  background: #6F9;
+}
+table.table button.delete {
+  background: #F69;
+}
+@media screen and (max-width: 800px) {
+  table.table tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+    border: 1px solid rgba(3, 3, 3, 0.2);
+  }
+  table.table td,
+  table.table th {
+    flex: 1 1 150px;
+    border: 0.5px solid rgba(3, 3, 3, 0.2);
+  }
+}
