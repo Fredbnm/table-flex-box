@@ -1,0 +1,19 @@
+{
+  "name": "table-flex-box",
+  "version": "1.0.0",
+  "description": "A responsive Flexbox Table",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredbnm/table-flex-box.git"
+  },
+  "author": "Fred Martins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fredbnm/table-flex-box/issues"
+  },
+  "homepage": "https://github.com/Fredbnm/table-flex-box#readme"
+}
