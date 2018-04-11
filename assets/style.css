@@ -5,9 +5,6 @@ html {
   font-size: 100%;
   font-family: 'Roboto', sans-serif;
 }
-* {
-  box-model: border-box;
-}
 h1,
 h2,
 h3,
@@ -41,8 +38,30 @@ table.table td {
   text-align: left;
   padding: 0.25em;
 }
-table.table tr {
+@media screen and (max-width: 991px) {
+  table.table thead {
+    display: none;
+  }
+}
+table.table tbody tr {
   border-bottom: 1px solid #DDD;
+}
+@media screen and (max-width: 991px) {
+  table.table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+table.table tbody tr td[data-title]:before {
+  float: left;
+  font-size: inherit;
+  font-weight: 400;
+  color: #757575;
+}
+@media screen and (max-width: 991px) {
+  table.table tbody tr td[data-title]:before {
+    content: attr(data-title);
+  }
 }
 table.table td.edit-buttons {
   text-align: right;
@@ -73,7 +92,7 @@ table.table button.delete {
   }
   table.table td,
   table.table th {
-    flex: 1 1 150px;
+    width: 100%;
     border: 0.5px solid rgba(3, 3, 3, 0.2);
   }
 }

@@ -4,7 +4,6 @@ body, html {
     font-size: 100%;
     font-family: 'Roboto', sans-serif;
 }
-* { box-model: border-box }
 h1, h2,h3, h4, h5, h6 {
     margin: 0px;
 }
@@ -22,56 +21,72 @@ h1, h2,h3, h4, h5, h6 {
         align-self:baseline;
         font-weight: 400;
         color: #bbb8b8;
-    }
+   }
 }
-
-
 /* Table*/
-
-table.table { width: 100%; 
-
-    th, td { 
-        text-align: left; 
+table.table {
+    width: 100%;
+    th, td {
+        text-align: left;
         padding: 0.25em;
-      }
-      tr { 
+   }
+   thead{
+    @media screen and (max-width: 991px){
+        display: none;
+    }
+   }
+   tbody {
+    tr {
         border-bottom: 1px solid #DDD;
-      }
-      td.edit-buttons { text-align: right; }
-      button { 
-        border-radius: 3px; 
-        border: none; 
-        margin: 0 0.25em; 
+        td {
+            @media screen and (max-width: 991px) {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+        }
+        td[data-title]:before {
+            float: left;
+            font-size: inherit;
+            font-weight: 400;
+            color: #757575;
+            @media screen and (max-width: 991px) {
+                content: attr(data-title);
+           }
+       }
+   }
+   }
+    
+    td.edit-buttons {
+        text-align: right;
+   }
+    button {
+        border-radius: 3px;
+        border: none;
+        margin: 0 0.25em;
         transition: all 0.3s;
-        &:hover { 
-            box-shadow: 0 0 4px rgba(3,3,3,0.8); 
+        &:hover {
+            box-shadow: 0 0 4px rgba(3,3,3,0.8);
             opacity: 0.9;
-          }
-      }
-      
-      
-      
-      button.edit { background: #6F9; }
-      button.delete { background: #F69; }
-      
-      @media screen and (max-width: 800px) {
-        tr { 
-          display: flex; 
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin: 0.5em 0;
-          border: 1px solid rgba(3,3,3,0.2);
-        }
+       }
+   }
+    button.edit {
+        background: #6F9;
+   }
+    button.delete {
+        background: #F69;
+   }
+    @media screen and (max-width: 800px) {
+        tr {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0.5em 0;
+            border: 1px solid rgba(3,3,3,0.2);
+       }
         td, th {
-          flex: 1 1 150px;
-          border: 0.5px solid rgba(3,3,3,0.2);
-        }
-       
-      }
-
+            width: 100%;
+            border: 0.5px solid rgba(3,3,3,0.2);
+       }
+   }
 }
-
-
-
-
-
